@@ -14,7 +14,7 @@
 
 
         <div class="item active">
-            <img src="@Model.First().UrlCapa" alt="@Model.First().UrlCapa" class="img-responsive" />
+            <img src="@Model.First().UrlCapa" alt="@Model.First().UrlCapa" class="img-responsive capa-grande" />
             <div class="carousel-caption" role="option">
                 <p>
                     @Model.First().Titulo
@@ -25,7 +25,7 @@
         @foreach (var item in Model.Skip(1))
         {
             <div class="item">
-                <img src="@item.UrlCapa" alt="@item.UrlCapa" class="img-responsive" />
+                <img src="@item.UrlCapa" alt="@item.UrlCapa" class="img-responsive capa-grande" />
                 <div class="carousel-caption" role="option">
                     <p>
                         @item.Titulo
