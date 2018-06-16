@@ -9,3 +9,14 @@ C:\Users\Willian\Documents\Visual Studio 2017\Projects\ZeroToHero\WebApp\obj\Deb
 C:\Users\Willian\Documents\Visual Studio 2017\Projects\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
 C:\Users\Willian\Documents\Visual Studio 2017\Projects\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.dll
 C:\Users\Willian\Documents\Visual Studio 2017\Projects\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.pdb
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\bin\Debug\netcoreapp2.0\WebApp.deps.json
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\bin\Debug\netcoreapp2.0\WebApp.dll
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\bin\Debug\netcoreapp2.0\WebApp.pdb
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.csprojAssemblyReference.cache
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.dll
+J:\Desenvolvimento\PixelValley\ZeroToHero\WebApp\obj\Debug\netcoreapp2.0\WebApp.pdb

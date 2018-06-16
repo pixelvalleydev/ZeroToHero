@@ -26,6 +26,9 @@ namespace WebApp.Migrations
                     b.Property<string>("Titulo")
                         .HasMaxLength(100);
 
+                    b.Property<string>("UrlCapa")
+                        .HasMaxLength(200);
+
                     b.HasKey("Id");
 
                     b.ToTable("Filmes");

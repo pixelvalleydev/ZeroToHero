@@ -11762,7 +11762,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "f6pUbJsG8YEm2tGhBODrEhU/pywVgsx4ZUwFPfZZIhmFUPFAbJcNlQBkc/1Obc/5b6VqDtkyA8d0GSFGlX0BjA==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -13197,7 +13197,7 @@
       ]
     },
     "System.Xml.XmlDocument/4.3.0": {
-      "sha512": "LqFMHsBoO0M+6GDVUwTcutbqS+idJyaeBewDbgf0EUKyqi0TcXiIsjuTrDtuUEvyPben6/bAIqAMtRSpXl1MCg==",
+      "sha512": "lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "type": "package",
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
@@ -13410,23 +13410,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Willian\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Willian\\Documents\\Visual Studio 2017\\Projects\\ZeroToHero\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "J:\\Desenvolvimento\\PixelValley\\ZeroToHero\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Willian\\Documents\\Visual Studio 2017\\Projects\\ZeroToHero\\WebApp\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\Willian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Willian\\Documents\\Visual Studio 2017\\Projects\\ZeroToHero\\WebApp\\obj\\",
+      "projectPath": "J:\\Desenvolvimento\\PixelValley\\ZeroToHero\\WebApp\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "J:\\Desenvolvimento\\PixelValley\\ZeroToHero\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Willian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

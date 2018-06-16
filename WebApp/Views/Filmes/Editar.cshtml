@@ -12,10 +12,9 @@
     <div class="col-md-4">
         <form asp-action="Editar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" disabled />
-            </div>
+
+            <input asp-for="Id" class="form-control" type="hidden" />
+
             <div class="form-group">
                 <label asp-for="Titulo" class="control-label"></label>
                 <input asp-for="Titulo" class="form-control" />
@@ -26,6 +25,13 @@
                 <input asp-for="AssistidoEm" class="form-control" />
                 <span asp-validation-for="AssistidoEm" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="UrlCapa" class="control-label"></label>
+                <input asp-for="UrlCapa" class="form-control" />
+                <span asp-validation-for="UrlCapa" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-default" />
             </div>

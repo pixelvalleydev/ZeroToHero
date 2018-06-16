@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebApp.Models
 {
@@ -17,6 +14,10 @@ namespace WebApp.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime? AssistidoEm { get; set; }
+
+        [Display(Name = "Capa")]
+        [StringLength(200, ErrorMessage = "A url da capa não pode conter mais de 200 caracteres")]
+        public string UrlCapa { get; set; }
 
     }
 }

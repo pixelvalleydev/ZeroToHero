@@ -75,6 +75,9 @@ namespace WebApp.Controllers
 
                 filmeSalvo.Titulo = filme.Titulo;
                 filmeSalvo.AssistidoEm = filme.AssistidoEm;
+                filmeSalvo.UrlCapa = filme.UrlCapa;
+
+                _contexto.SaveChanges();
 
                 return RedirectToAction(nameof(Listar));
             }
@@ -88,6 +91,8 @@ namespace WebApp.Controllers
         public ActionResult Excluir(int id)
         {
             var filme = _contexto.Filmes.FirstOrDefault(filmeC => filmeC.Id == id);
+
+            _contexto.SaveChanges();
 
             return View(filme);
         }
