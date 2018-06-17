@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using WebApp.Database;
 using WebApp.Models;
-using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -30,12 +25,12 @@ namespace WebApp.Controllers
         // GET: Serie/Detalhes/5
         public ActionResult Detalhes(int id)
         {
-            DetalheSerieViewModel viewModel = new DetalheSerieViewModel();
+            //DetalheSerieViewModel viewModel = new DetalheSerieViewModel();
 
-            viewModel.Serie = _contexto.Series.FirstOrDefault(x => x.Id == id);
-            viewModel.NumeroEpisodios = _contexto.Episodios.Count(x => x.SerieId == id);
+            var serie = new Serie();
+            serie = _contexto.Series.FirstOrDefault(x => x.Id == id);
 
-            return View(viewModel);
+            return View(serie);
         }
 
         // GET: Serie/Cadastrar

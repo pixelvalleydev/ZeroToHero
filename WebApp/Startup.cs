@@ -25,7 +25,7 @@ namespace WebApp
         {
             var connection = Configuration["ConexaoSqlite:ConnectionString"];
             services.AddDbContext<ZeroToHeroContext>(options =>
-                options.UseSqlite(connection)
+                    options.UseSqlite(connection)
             );
             // Add framework services.
             services.AddMvc();

@@ -15,6 +15,9 @@ namespace WebApp.Models
         [StringLength(200, ErrorMessage = "A url da capa não pode conter mais de 200 caracteres")]
         public string UrlCapa { get; set; }
 
+        [Display(Name = "Total de Episódios")]
+        public int TotalEpisodios { get; set; }
+
         public StatusSerie Status { get; set; }
     }
 }

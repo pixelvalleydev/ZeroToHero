@@ -13,11 +13,16 @@
         <form asp-action="Editar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                <input asp-for="Id" class="form-control" type="hidden" />
+            <input asp-for="Id" class="form-control" type="hidden" />
             <div class="form-group">
                 <label asp-for="Titulo" class="control-label"></label>
                 <input asp-for="Titulo" class="form-control" />
                 <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalEpisodios" class="control-label"></label>
+                <input asp-for="TotalEpisodios" class="form-control" />
+                <span asp-validation-for="TotalEpisodios" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="UrlCapa" class="control-label"></label>

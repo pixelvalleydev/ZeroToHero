@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApp.Database;
 
 namespace WebApp.Migrations
 {
     [DbContext(typeof(ZeroToHeroContext))]
-    partial class ZeroToHeroContextModelSnapshot : ModelSnapshot
+    [Migration("20180617021954_RemovendoTabelaEpisodios")]
+    partial class RemovendoTabelaEpisodios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

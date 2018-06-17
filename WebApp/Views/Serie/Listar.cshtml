@@ -12,7 +12,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>                
+            <th>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Titulo)
@@ -28,7 +28,7 @@
         {
             <tr>
                 <td>
-                    <img src="@item.UrlCapa" alt="@item.Titulo" class="img-thumbnail capa-extra-pequena" />                    
+                    <img src="@item.UrlCapa" alt="@item.Titulo" class="img-thumbnail capa-extra-pequena" />
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Titulo)
@@ -39,7 +39,6 @@
                 <td>
                     @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
                     @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
-                    @Html.ActionLink("Episódios","Listar", "Episodio", new { serieId = item.Id }) |
                     @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
                 </td>
             </tr>
