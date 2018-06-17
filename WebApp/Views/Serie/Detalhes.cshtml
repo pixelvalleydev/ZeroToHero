@@ -1,0 +1,42 @@
+﻿@model WebApp.ViewModels.DetalheSerieViewModel
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Série</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie.Titulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serie.Titulo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroEpisodios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEpisodios)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serie.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serie.UrlCapa)
+        </dt>
+        <dd>
+            <img src="@Model.Serie.UrlCapa" alt="@Model.Serie.Titulo" class="img-rounded capa-pequena" />
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Serie.Id }) |
+    <a asp-action="Listar">Voltar para listagem</a>
+</div>

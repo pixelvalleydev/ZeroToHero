@@ -6,46 +6,52 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Database;
 using WebApp.Models;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
-    public class FilmesController : Controller
+    public class SerieController : Controller
     {
         private readonly ZeroToHeroContext _contexto;
 
-        public FilmesController(ZeroToHeroContext contexto)
+        public SerieController(ZeroToHeroContext contexto)
         {
             _contexto = contexto;
         }
 
-        // GET: Filmes
+        // GET: Serie/Listar
         public ActionResult Listar()
         {
-            var listagem = _contexto.Filmes.ToList();
-            return View(listagem);
+            var series = _contexto.Series.ToList();
+
+            return View(series);
         }
 
-        // GET: Filmes/Detalhes/5
+        // GET: Serie/Detalhes/5
         public ActionResult Detalhes(int id)
         {
-            var filme = _contexto.Filmes.FirstOrDefault(filmeC => filmeC.Id == id);
-            return View(filme);
+            DetalheSerieViewModel viewModel = new DetalheSerieViewModel();
+
+            viewModel.Serie = _contexto.Series.FirstOrDefault(x => x.Id == id);
+            viewModel.NumeroEpisodios = _contexto.Episodios.Count(x => x.SerieId == id);
+
+            return View(viewModel);
         }
 
-        // GET: Filmes/Cadastrar
+        // GET: Serie/Cadastrar
         public ActionResult Cadastrar()
         {
             return View();
         }
 
-        // POST: Filmes/Cadastrar
+        // POST: Serie/Cadastrar
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Cadastrar(Filme filme)
+        public ActionResult Cadastrar(Serie serie)
         {
             try
             {
-                _contexto.Add(filme);
+                _contexto.Series.Add(serie);
                 _contexto.SaveChanges();
 
                 return RedirectToAction(nameof(Listar));
@@ -56,26 +62,26 @@ namespace WebApp.Controllers
             }
         }
 
-        // GET: Filmes/Editar/5
+        // GET: Serie/Editar/5
         public ActionResult Editar(int id)
         {
-            var filme = _contexto.Filmes.FirstOrDefault(filmeC => filmeC.Id == id);
+            var serie = _contexto.Series.FirstOrDefault(x => x.Id == id);
 
-            return View(filme);
+            return View(serie);
         }
 
-        // POST: Filmes/Editar/5
+        // POST: Serie/Editar/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(int id, Filme filme)
+        public ActionResult Editar(int id, Serie serie)
         {
             try
             {
-                var filmeSalvo = _contexto.Filmes.FirstOrDefault(filmeC => filmeC.Id == id);
+                var serieSalva = _contexto.Series.FirstOrDefault(x => x.Id == id);
 
-                filmeSalvo.Titulo = filme.Titulo;
-                filmeSalvo.AssistidoEm = filme.AssistidoEm;
-                filmeSalvo.UrlCapa = filme.UrlCapa;
+                serieSalva.Titulo = serie.Titulo;
+                serieSalva.UrlCapa = serie.UrlCapa;
+                serieSalva.Status = serie.Status;
 
                 _contexto.SaveChanges();
 
@@ -87,22 +93,24 @@ namespace WebApp.Controllers
             }
         }
 
-        // GET: Filmes/Excluir/5
+        // GET: Serie/Excluir/5
         public ActionResult Excluir(int id)
         {
-            var filme = _contexto.Filmes.FirstOrDefault(filmeC => filmeC.Id == id);
+            var serie = _contexto.Series.FirstOrDefault(x => x.Id == id);
 
-            return View(filme);
+            return View(serie);
         }
 
-        // POST: Filmes/Excluir/5
+        // POST: Serie/Excluir/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Excluir(int id, Filme filme)
+        public ActionResult Excluir(int id, Serie serie)
         {
             try
             {
-                _contexto.Set<Filme>().Remove(filme);
+                var serieSalva = _contexto.Series.FirstOrDefault(x => x.Id == id);
+
+                _contexto.Set<Serie>().Remove(serieSalva);
                 _contexto.SaveChanges();
 
                 return RedirectToAction(nameof(Listar));

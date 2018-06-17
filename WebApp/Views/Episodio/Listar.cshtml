@@ -1,35 +1,30 @@
-﻿@model IEnumerable<WebApp.Models.Filme>
+﻿@model WebApp.ViewModels.ListarEpisodioViewModel
 
 @{
-    ViewData["Title"] = "Listagem";
+    ViewData["Title"] = "Listar";
 }
 
-<h2>Listagem</h2>
+<h2>Episódios da série @Model.SerieTitulo</h2>
 
-<p>
-    <a asp-action="Cadastrar">Novo Filme</a>
+<p>    
+    @Html.ActionLink("Novo Episódio", "Cadastrar", new { serieId = Model.SerieId })
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>                
+            <th>
+                Título
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AssistidoEm)
+                Assistido Em
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Episodios)
         {
             <tr>
-                <td>
-                    <img src="@item.UrlCapa" alt="@item.Titulo" class="img-thumbnail capa-extra-pequena" />
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
@@ -39,7 +34,7 @@
                 <td>
                     @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
                     @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
-                    @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+                    @Html.ActionLink("Excluir", "Excluir", new {  id = item.Id })
                 </td>
             </tr>
         }
